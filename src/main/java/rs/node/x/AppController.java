@@ -1,14 +1,13 @@
 package rs.node.x;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.util.Callback;
 
 import java.net.URL;
@@ -65,6 +64,15 @@ public class AppController implements Initializable {
 		});
 
 
+		lv_combo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+				System.out.println("stari " + oldValue + " novi " + newValue);
+				Combo c = obs_combo.get((Integer) newValue);
+				obs_legs.clear();
+				obs_legs.addAll(c.getLegs());
+			}
+		});
 	}
 
 
@@ -79,6 +87,7 @@ public class AppController implements Initializable {
 		l.setPrice(21);
 		obs_legs.add(l);
 	}
+
 
 
 }

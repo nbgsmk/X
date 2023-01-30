@@ -29,11 +29,15 @@ public class Combo {
 	public String getDescription(){
 		String s = "";
 		for (Leg l : legs){
-			s = l.getContract().getShortName();
+			s += l.getContract().getShortName();
 			s += " ";
 			s += l.getContract().getStrajk();
 
 		}
 		return s;
+	}
+
+	public ObservableList<Leg> getLegs() {
+		return legs;
 	}
 }
