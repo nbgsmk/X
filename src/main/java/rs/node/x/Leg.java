@@ -2,7 +2,6 @@ package rs.node.x;
 
 public class Leg {
 	private int amount;
-	// private String tip;
 	private Contract contract;
 	private int price;
 

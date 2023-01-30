@@ -1,8 +1,11 @@
 package rs.node.x;
 
-public class Contract {
+public abstract class Contract {
+
 	private int strajk;
-	private String shortName;
+	protected String skr;
+
+	abstract void setSkr(String s);
 
 	public Contract() {
 	}
@@ -11,16 +14,14 @@ public class Contract {
 		this.strajk = strajk;
 	}
 
-	public String getShortName() {
-		return shortName;
-	}
-
-	protected void setShortName(String shortName) {
-		this.shortName = shortName;
+	public String getSkr() {
+		return skr;
 	}
 
 	public int getStrajk() {
 		return strajk;
 	}
+
+
 
 }

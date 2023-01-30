@@ -3,8 +3,6 @@ package rs.node.x;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class LegCell extends ListCell<Leg> {
@@ -28,7 +26,7 @@ public class LegCell extends ListCell<Leg> {
 		super.updateItem(item, empty);
 		if (item != null && !empty) { // <== test for null item and empty parameter
 			t_amt.setText(String.valueOf(item.getAmount()));
-			t_tip.setText(item.getContract().getShortName() + " " + item.getContract().getStrajk());
+			t_tip.setText(item.getContract().getSkr() + " " + item.getContract().getStrajk());
 			t_px.setText(String.format(" @ %d $", item.getPrice()));
 			setGraphic(content);
 		} else {

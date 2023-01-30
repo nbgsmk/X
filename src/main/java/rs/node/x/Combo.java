@@ -3,7 +3,6 @@ package rs.node.x;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.List;
 import java.util.Random;
 
 public class Combo {
@@ -29,7 +28,7 @@ public class Combo {
 	public String getDescription(){
 		String s = "";
 		for (Leg l : legs){
-			s += l.getContract().getShortName();
+			s += l.getContract().getSkr();
 			s += " ";
 			s += l.getContract().getStrajk();
 
