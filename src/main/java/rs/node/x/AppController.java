@@ -52,6 +52,13 @@ public class AppController implements Initializable {
 		});
 
 
+		obs_legs.addAll(new Leg(), new Leg(4, "P"), new Leg(7, "C"));
+		lv_legs.setCellFactory(new Callback<ListView<Leg>, ListCell<Leg>>() {
+			@Override
+			public ListCell<Leg> call(ListView<Leg> param) {
+				return new LegCell();
+			}
+		});
 
 	}
 
@@ -63,12 +70,10 @@ public class AppController implements Initializable {
 	}
 
 	public void on_b2_click(ActionEvent actionEvent) {
+		Leg l = new Leg(17, "levo desno dodaj me");
+		l.setPrice(21);
+		obs_legs.add(l);
 	}
 
-
-	@FXML
-	protected void onHelloButtonClick() {
-		welcomeText.setText("Welcome to JavaFX Application!");
-	}
 
 }
