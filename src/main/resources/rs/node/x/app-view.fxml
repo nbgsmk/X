@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="rs.node.x.HelloController">
+<VBox alignment="CENTER" minHeight="300.0" minWidth="700.0" prefHeight="300.0" prefWidth="700.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.node.x.AppController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <children>
+         <ListView fx:id="lv_contract" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+         <ListView fx:id="lv_legs" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+      </children>
+   </HBox>
+   <HBox>
+      <children>
+         <Button fx:id="b1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" text="b1" HBox.hgrow="ALWAYS" />
+         <Button fx:id="b2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" text="b2" HBox.hgrow="ALWAYS" />
+      </children>
+   </HBox>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
 </VBox>
