@@ -10,7 +10,7 @@
     </padding>
    <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
       <children>
-         <ListView fx:id="lv_contract" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+         <ListView fx:id="lv_combo" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
          <ListView fx:id="lv_legs" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
       </children>
    </HBox>

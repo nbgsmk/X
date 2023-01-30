@@ -16,8 +16,8 @@ import java.util.ResourceBundle;
 
 public class AppController implements Initializable {
 
-	public ListView<Contract> lv_contract;
-	public ObservableList<Contract> obs_contract;
+	public ListView<Combo> lv_combo;
+	public ObservableList<Combo> obs_combo;
 
 	public ListView<Leg> lv_legs;
 	public ObservableList<Leg> obs_legs;
@@ -34,8 +34,8 @@ public class AppController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		obs_contract = FXCollections.observableArrayList();
-		lv_contract.setItems(obs_contract);
+		obs_combo = FXCollections.observableArrayList();
+		lv_combo.setItems(obs_combo);
 
 		obs_legs = FXCollections.observableArrayList();
 		lv_legs.setItems(obs_legs);
@@ -64,8 +64,8 @@ public class AppController implements Initializable {
 
 
 	public void on_b1_click(ActionEvent actionEvent) {
-		Contract c = new Contract();
-		obs_contract.add(c);
+		Combo c = new Combo();
+		obs_combo.add(c);
 
 	}
 
