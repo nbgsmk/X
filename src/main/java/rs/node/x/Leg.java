@@ -2,18 +2,23 @@ package rs.node.x;
 
 public class Leg {
 	private int amount;
-	private String tip;
+	// private String tip;
 	private Contract contract;
 	private int price;
 
-	public Leg() {
+	private Leg() {
 		super();
 	}
 
-	public Leg(int amount, String tip) {
-		super();
+	public Leg(int amount, Contract contract) {
 		this.amount = amount;
-		this.tip = tip;
+		this.contract = contract;
+	}
+
+	public Leg(int amount, Contract contract, int price) {
+		this.amount = amount;
+		this.contract = contract;
+		this.price = price;
 	}
 
 	public int getAmount() {
@@ -24,12 +29,8 @@ public class Leg {
 		this.amount = amount;
 	}
 
-	public String getTip() {
-		return tip;
-	}
-
-	public void setTip(String tip) {
-		this.tip = tip;
+	public Contract getContract() {
+		return contract;
 	}
 
 	public int getPrice() {

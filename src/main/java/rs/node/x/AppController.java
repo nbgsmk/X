@@ -52,7 +52,7 @@ public class AppController implements Initializable {
 		});
 
 
-		obs_legs.addAll(new Leg(), new Leg(4, "P"), new Leg(7, "C"));
+		obs_legs.addAll(new Leg(4, new Put(120)), new Leg(7, new Call(119)));
 		lv_legs.setCellFactory(new Callback<ListView<Leg>, ListCell<Leg>>() {
 			@Override
 			public ListCell<Leg> call(ListView<Leg> param) {
@@ -70,7 +70,7 @@ public class AppController implements Initializable {
 	}
 
 	public void on_b2_click(ActionEvent actionEvent) {
-		Leg l = new Leg(17, "levo desno dodaj me");
+		Leg l = new Leg(17, new Call(400));
 		l.setPrice(21);
 		obs_legs.add(l);
 	}
