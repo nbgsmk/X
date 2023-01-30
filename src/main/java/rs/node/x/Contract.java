@@ -2,7 +2,7 @@ package rs.node.x;
 
 public class Contract {
 	private int strajk;
-	protected String shortName;
+	private String shortName;
 
 	public Contract() {
 	}
@@ -13,6 +13,10 @@ public class Contract {
 
 	public String getShortName() {
 		return shortName;
+	}
+
+	protected void setShortName(String shortName) {
+		this.shortName = shortName;
 	}
 
 	public int getStrajk() {

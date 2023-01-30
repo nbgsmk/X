@@ -4,6 +4,6 @@ public class Put extends Contract{
 
 	public Put(int strajk) {
 		super(strajk);
-		this.shortName = "P";
+		this.setShortName("C");
 	}
 }

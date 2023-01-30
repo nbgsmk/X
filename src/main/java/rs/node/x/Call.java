@@ -4,7 +4,7 @@ public class Call extends Contract{
 
 	public Call(int strajk) {
 		super(strajk);
-		this.shortName = "C";
+		this.setShortName("C");
 	}
 
 
