@@ -7,7 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -42,6 +44,12 @@ public class AppController implements Initializable {
 		lv_customthing.setItems(obs_things);
 		obs_things.addAll(new CustomThing("Cheese", 123), new CustomThing("Horse", 456), new CustomThing("Jam", 789));
 
+		lv_customthing.setCellFactory(new Callback<ListView<CustomThing>, ListCell<CustomThing>>() {
+			@Override
+			public ListCell<CustomThing> call(ListView<CustomThing> param) {
+				return new CustomListCell();
+			}
+		});
 
 
 
