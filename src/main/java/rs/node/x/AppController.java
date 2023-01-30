@@ -18,9 +18,13 @@ public class AppController implements Initializable {
 	public ObservableList<Contract> obs_contract;
 
 	public ListView<Leg> lv_legs;
+	public ObservableList<Leg> obs_legs;
+
 	public Button b1;
 	public Button b2;
 
+	public ListView<CustomThing> lv_customthing;
+	public ObservableList<CustomThing> obs_things;
 
 
 	@FXML
@@ -30,6 +34,16 @@ public class AppController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		obs_contract = FXCollections.observableArrayList();
 		lv_contract.setItems(obs_contract);
+
+		obs_legs = FXCollections.observableArrayList();
+		lv_legs.setItems(obs_legs);
+
+		obs_things = FXCollections.observableArrayList();
+		lv_customthing.setItems(obs_things);
+		obs_things.addAll(new CustomThing("Cheese", 123), new CustomThing("Horse", 456), new CustomThing("Jam", 789));
+
+
+
 
 	}
 

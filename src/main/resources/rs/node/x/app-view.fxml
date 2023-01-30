@@ -20,7 +20,5 @@
          <Button fx:id="b2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" text="b2" HBox.hgrow="ALWAYS" />
       </children>
    </HBox>
-
-    <Label fx:id="welcomeText" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <ListView fx:id="lv_customthing" prefHeight="200.0" prefWidth="200.0" />
 </VBox>
