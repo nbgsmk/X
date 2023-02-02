@@ -20,5 +20,10 @@
          <Button fx:id="b2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" text="b2" HBox.hgrow="ALWAYS" />
       </children>
    </HBox>
-   <ListView fx:id="lv_customthing" minHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" />
+   <HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
+      <children>
+         <ListView fx:id="lv_customthing" />
+         <ListView />
+      </children>
+   </HBox>
 </VBox>
