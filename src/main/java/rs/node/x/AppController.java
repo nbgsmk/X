@@ -67,7 +67,6 @@ public class AppController implements Initializable {
 		lv_combo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-				System.out.println("stari " + oldValue + " novi " + newValue);
 				Combo c = obs_combo.get((Integer) newValue);
 				obs_legs.clear();
 				obs_legs.addAll(c.getLegs());

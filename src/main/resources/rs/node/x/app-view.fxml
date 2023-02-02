@@ -8,7 +8,8 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <HBox minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0">
+   <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="povezani listview: klik combo levo -&gt; legs desno" VBox.vgrow="ALWAYS" />
+   <HBox minHeight="-Infinity" prefHeight="95.0" prefWidth="410.0">
       <children>
          <ListView fx:id="lv_combo" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
          <ListView fx:id="lv_legs" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
@@ -16,14 +17,20 @@
    </HBox>
    <HBox>
       <children>
-         <Button fx:id="b1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" text="b1" HBox.hgrow="ALWAYS" />
-         <Button fx:id="b2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" text="b2" HBox.hgrow="ALWAYS" />
+         <Button fx:id="b1" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" prefWidth="400.0" text="dodaj combo gore" HBox.hgrow="ALWAYS" />
+         <Button fx:id="b2" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" prefWidth="400.0" text="dodaj leg gore" HBox.hgrow="ALWAYS" />
+      </children>
+   </HBox>
+   <HBox>
+      <children>
+         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView is Jave" HBox.hgrow="ALWAYS" />
+         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView iz FXML jebenog" HBox.hgrow="ALWAYS" />
       </children>
    </HBox>
    <HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
       <children>
-         <ListView fx:id="lv_customthing" />
-         <ListView />
+         <ListView fx:id="lv_customthing" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
+         <ListView fx:id="lv_fxmlcustom" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
       </children>
    </HBox>
 </VBox>
