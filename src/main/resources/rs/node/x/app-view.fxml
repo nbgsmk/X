@@ -30,7 +30,7 @@
    <HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
       <children>
          <ListView fx:id="lv_customthing" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
-         <ListView fx:id="lv_fxmlcustom" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
+         <ListView fx:id="lv_fx" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
       </children>
    </HBox>
 </VBox>

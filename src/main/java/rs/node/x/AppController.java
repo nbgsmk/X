@@ -27,9 +27,13 @@ public class AppController implements Initializable {
 	public ListView<CustomThing> lv_customthing;
 	public ObservableList<CustomThing> obs_things;
 
+	public ListView<Row_item> lv_rows;
+	public ObservableList<Row_item> obs_rows;
 
 	@FXML
 	private Label welcomeText;
+
+	private static int brojac;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -72,6 +76,17 @@ public class AppController implements Initializable {
 				obs_legs.addAll(c.getLegs());
 			}
 		});
+
+
+		obs_rows = FXCollections.observableArrayList();
+		lv_rows.setItems(obs_rows);
+		obs_rows.add(new Row_item());
+		lv_rows.setCellFactory(new Callback<ListView<Row_item>, ListCell<Row_item>>() {
+			@Override
+			public ListCell<Row_item> call(ListView<Row_item> param) {
+				return new Row();
+			}
+		});
 	}
 
 
@@ -85,6 +100,9 @@ public class AppController implements Initializable {
 		Leg l = new Leg(17, new Call(400));
 		l.setPrice(21);
 		obs_legs.add(l);
+
+		Row_item r = new Row_item("ime " + brojac++, "prezime", brojac%3);
+		obs_rows.add(r);
 	}
 
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.node.x.Row">
+   <children>
+      <VBox spacing="10.0">
+         <children>
+            <Label fx:id="lab1" text="L1" />
+            <Label fx:id="lab2" text="L2" />
+            <Spinner fx:id="spin1" />
+            <Spinner fx:id="spin2" />
+            <HBox maxWidth="1.7976931348623157E308">
+               <children>
+                  <RadioButton fx:id="rb1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="RB 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgr" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rb2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="RB 2" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
