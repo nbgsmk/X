@@ -18,7 +18,7 @@
    <HBox>
       <children>
          <Button fx:id="b1" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" prefWidth="400.0" text="dodaj combo gore" HBox.hgrow="ALWAYS" />
-         <Button fx:id="b2" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" prefWidth="400.0" text="dodaj leg gore" HBox.hgrow="ALWAYS" />
+         <Button fx:id="b2" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" prefWidth="400.0" text="+ leg gore + row dole" HBox.hgrow="ALWAYS" />
       </children>
    </HBox>
    <HBox>
@@ -30,7 +30,7 @@
    <HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
       <children>
          <ListView fx:id="lv_customthing" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
-         <ListView fx:id="lv_fx" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
+         <ListView fx:id="lv_rows" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
       </children>
    </HBox>
 </VBox>

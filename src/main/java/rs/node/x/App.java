@@ -15,6 +15,15 @@ public class App extends Application {
 		stage.setTitle("Hello!");
 		stage.setScene(scene);
 		stage.show();
+		
+		// CustomControl customControl = new CustomControl();
+		// customControl.setText("Hello!");
+		//
+		// stage.setScene(new Scene(customControl));
+		// stage.setTitle("Custom Control");
+		// stage.setWidth(300);
+		// stage.setHeight(200);
+		// stage.show();
 	}
 
 	public static void main(String[] args) {

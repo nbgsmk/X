@@ -1,50 +1,42 @@
 package rs.node.x;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.*;
+public class Row {
+	private String ime = "a";
+	private String prezime = "b";
+	private Integer godine = 2;
 
-import java.io.IOException;
 
-public class Row extends ListCell<Row_item> {
-	// @FXML
-	public Label lab1;
-	// @FXML
-	public Label lab2;
-	// @FXML
-	public Spinner<Integer> spin1;
-	// @FXML
-	public Spinner<Integer> spin2;
-	// @FXML
-	public RadioButton rb1;
-	// @FXML
-	public ToggleGroup tgr;
-	// @FXML
-	public RadioButton rb2;
+	/*
+
+	https://docs.oracle.com/javase/8/javafx/fxml-tutorial/custom_control.htm
+
+	 */
 
 	public Row() {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("row.fxml"));
-		loader.setRoot(this);
-		loader.setController(this);
-		try {
-			loader.load();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
 	}
-
-	public Label getLab1() {
-		return lab1;
+	
+	
+	public String getIme() {
+		return ime;
 	}
-
-	public Label getLab2() {
-		return lab2;
+	
+	public void setIme(String ime) {
+		this.ime = ime;
 	}
-
-	public void setLab1(String s) {
-		this.lab1.setText(s);
+	
+	public String getPrezime() {
+		return prezime;
 	}
-
-	public void setLab2(String s) {
-		this.lab2.setText(s);
+	
+	public void setPrezime(String prezime) {
+		this.prezime = prezime;
+	}
+	
+	public Integer getGodine() {
+		return godine;
+	}
+	
+	public void setGodine(Integer godine) {
+		this.godine = godine;
 	}
 }

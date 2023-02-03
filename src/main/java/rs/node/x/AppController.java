@@ -27,8 +27,8 @@ public class AppController implements Initializable {
 	public ListView<CustomThing> lv_customthing;
 	public ObservableList<CustomThing> obs_things;
 
-	public ListView<Row_item> lv_rows;
-	public ObservableList<Row_item> obs_rows;
+	public ListView<Row> lv_rows;
+	public ObservableList<Row> obs_rows;
 
 	@FXML
 	private Label welcomeText;
@@ -39,14 +39,23 @@ public class AppController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		obs_combo = FXCollections.observableArrayList();
 		lv_combo.setItems(obs_combo);
-		obs_combo.add(new Combo());
+		obs_combo.addAll(new Combo(), new Combo());
 		lv_combo.setCellFactory(new Callback<ListView<Combo>, ListCell<Combo>>() {
 			@Override
 			public ListCell<Combo> call(ListView<Combo> param) {
 				return new ComboCell();
 			}
 		});
+		lv_combo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+				Combo c = obs_combo.get((Integer) newValue);
+				obs_legs.clear();
+				obs_legs.addAll(c.getLegs());
+			}
+		});
 
+		
 		obs_legs = FXCollections.observableArrayList();
 		lv_legs.setItems(obs_legs);
 		obs_legs.addAll(new Leg(4, new Put(120)), new Leg(7, new Call(119)));
@@ -57,6 +66,7 @@ public class AppController implements Initializable {
 			}
 		});
 
+		
 		obs_things = FXCollections.observableArrayList();
 		lv_customthing.setItems(obs_things);
 		obs_things.addAll(new CustomThing("Cheese", 123), new CustomThing("Horse", 456), new CustomThing("Jam", 789));
@@ -68,25 +78,19 @@ public class AppController implements Initializable {
 		});
 
 
-		lv_combo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-			@Override
-			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-				Combo c = obs_combo.get((Integer) newValue);
-				obs_legs.clear();
-				obs_legs.addAll(c.getLegs());
-			}
-		});
 
 
 		obs_rows = FXCollections.observableArrayList();
 		lv_rows.setItems(obs_rows);
-		obs_rows.add(new Row_item());
-		lv_rows.setCellFactory(new Callback<ListView<Row_item>, ListCell<Row_item>>() {
+		obs_rows.add(new Row());
+		lv_rows.setCellFactory(new Callback<ListView<Row>, ListCell<Row>>() {
 			@Override
-			public ListCell<Row_item> call(ListView<Row_item> param) {
-				return new Row();
+			public ListCell<Row> call(ListView<Row> param) {
+				return new RowController();
 			}
 		});
+		
+		
 	}
 
 
@@ -101,8 +105,7 @@ public class AppController implements Initializable {
 		l.setPrice(21);
 		obs_legs.add(l);
 
-		Row_item r = new Row_item("ime " + brojac++, "prezime", brojac%3);
-		obs_rows.add(r);
+		obs_rows.add(new Row());
 	}
 
 
