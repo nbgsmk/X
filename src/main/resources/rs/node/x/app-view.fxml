@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<VBox minWidth="-Infinity" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.node.x.AppController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="povezani listview: klik combo levo -&gt; legs desno" VBox.vgrow="ALWAYS" />
-   <HBox minHeight="-Infinity" prefHeight="95.0" prefWidth="410.0">
-      <children>
-         <ListView fx:id="lv_combo" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
-         <ListView fx:id="lv_legs" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
-      </children>
-   </HBox>
-   <HBox>
-      <children>
-         <Button fx:id="b1" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" prefWidth="400.0" text="dodaj combo gore" HBox.hgrow="ALWAYS" />
-         <Button fx:id="b2" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" prefWidth="400.0" text="+ leg gore + row dole" HBox.hgrow="ALWAYS" />
-      </children>
-   </HBox>
-   <HBox>
-      <children>
-         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView is Jave" HBox.hgrow="ALWAYS" />
-         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView iz FXML jebenog" HBox.hgrow="ALWAYS" />
-      </children>
-   </HBox>
-   <HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
-      <children>
-         <ListView fx:id="lv_customthing" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
-         <ListView fx:id="lv_rows" maxWidth="1.7976931348623157E308" prefWidth="400.0" />
-      </children>
-   </HBox>
+<VBox xmlns:fx="http://javafx.com/fxml/1" minWidth="-Infinity" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="rs.node.x.AppController">
+	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+	</padding>
+	<Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="povezani listview: klik combo levo -&gt; legs desno" VBox.vgrow="ALWAYS"/>
+	<HBox minHeight="-Infinity" prefHeight="95.0" prefWidth="410.0">
+		<children>
+			<ListView fx:id="lv_combo" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+			<ListView fx:id="lv_legs" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+		</children>
+	</HBox>
+	<HBox>
+		<children>
+			<Button fx:id="b1" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b1_click" prefWidth="400.0" text="dodaj combo gore" HBox.hgrow="ALWAYS"/>
+			<Button fx:id="b2" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b2_click" prefWidth="400.0" text="+ leg gore + row dole"
+					HBox.hgrow="ALWAYS"/>
+		</children>
+	</HBox>
+	<HBox>
+		<children>
+			<Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView is Jave" HBox.hgrow="ALWAYS"/>
+			<Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="ListView iz FXML jebenog" HBox.hgrow="ALWAYS"/>
+		</children>
+	</HBox>
+	<HBox prefHeight="200.0" prefWidth="410.0" VBox.vgrow="ALWAYS">
+		<children>
+			<ListView fx:id="lv_customthing" maxWidth="1.7976931348623157E308" prefWidth="400.0"/>
+			<ListView fx:id="lv_rows" maxWidth="1.7976931348623157E308" prefWidth="400.0"/>
+		</children>
+	</HBox>
+	<Button fx:id="b_kastom" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#on_b_kastom" text="kastom" VBox.vgrow="ALWAYS"/>
+	<VBox fx:id="vb_kastom" prefHeight="100.0" prefWidth="200.0"/>
 </VBox>

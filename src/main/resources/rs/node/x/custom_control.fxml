@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root type="javafx.scene.layout.VBox"
+<fx:root type="javafx.scene.layout.HBox"
 		 xmlns:fx="http://javafx.com/fxml"
-		 fx:controller="rs.node.x.CustomControl"
 		 >
+
+	<!--fx:controller="rs.node.x.customcontrol.CustomControl"-->
+	<!--fx:controller="rs.node.x.customcontrol.CustomControl"-->
+
+
 	<TextField fx:id="textField"/>
 	<Button text="Click Me" onAction="#doSomething"/>
 </fx:root>
