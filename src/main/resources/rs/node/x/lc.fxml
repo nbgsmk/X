@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+	<!--
+	 fx:controller="rs.node.x.customcontrol.LC"
+
+	-->
+	<!--
+
+	fx:controller="rs.node.x.customcontrol.LC"
+
+	-->
+
+
+	<TextField fx:id="textField" />
+	<Button onAction="#doSomething" text="Click Me" />
+   <Spinner fx:id="lc_spin" onScroll="#skrol" />
+</fx:root>

@@ -12,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import rs.node.x.customcontrol.CustomControl;
+import rs.node.x.customcontrol.LC;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -47,6 +48,10 @@ public class AppController implements Initializable {
 	@FXML
 	public VBox vb_kastom;
 	
+	@FXML
+	public ListView<LC> lv_LC;
+	public ObservableList<LC> obs_LC;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		obs_combo = FXCollections.observableArrayList();
@@ -66,7 +71,8 @@ public class AppController implements Initializable {
 				obs_legs.addAll(c.getLegs());
 			}
 		});
-
+		
+		
 		
 		obs_legs = FXCollections.observableArrayList();
 		lv_legs.setItems(obs_legs);
@@ -95,13 +101,17 @@ public class AppController implements Initializable {
 		obs_rows = FXCollections.observableArrayList();
 		lv_rows.setItems(obs_rows);
 		obs_rows.add(new Row());
-		// lv_rows.setCellFactory(new Callback<ListView<Row>, ListCell<Row>>() {
+		
+		
+		obs_LC = FXCollections.observableArrayList();
+		lv_LC.setItems(obs_LC);
+		obs_LC.addAll(new LC(), new LC());
+		// lv_LC.setCellFactory(new Callback<ListView<LC>, ListCell<LC>>() {
 		// 	@Override
-		// 	public ListCell<Row> call(ListView<Row> param) {
-		// 		return new RowController();
+		// 	public ListCell<LC> call(ListView<LC> param) {
+		// 		return new __nesto sto extenduje ListCell;
 		// 	}
 		// });
-		
 		
 	}
 
@@ -122,8 +132,14 @@ public class AppController implements Initializable {
 	
 	
 	public void on_b_kastom(ActionEvent actionEvent) {
-		CustomControl customControl = new CustomControl();
-		customControl.setText("Levo desno " + brojac++);
-		vb_kastom.getChildren().add(customControl);
+		// CustomControl customControl = new CustomControl();
+		// customControl.setText("Levo desno " + brojac++);
+		// vb_kastom.getChildren().add(customControl);
+		
+		LC lc = new LC();
+		lc.setText("Levo desno " + brojac++);
+		vb_kastom.getChildren().add(lc);
+		
+		obs_LC.add(new LC());
 	}
 }
